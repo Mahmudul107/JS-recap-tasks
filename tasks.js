@@ -7,6 +7,9 @@ const string = "Let's reverse the string";
 const reversedString = reverseString(string);
 console.log(reversedString);
 
+
+
+
 // Task 2: Create a function that takes an array of numbers as input and returns the sum of all positive numbers in the array.
 
 function positiveNumbers(arr) {
@@ -22,6 +25,9 @@ function positiveNumbers(arr) {
 const arrayOfNumbers = [2, -5, 10, -3, 7];
 const positiveNumberOfNumbers = positiveNumbers(arrayOfNumbers);
 console.log(positiveNumberOfNumbers);
+
+
+
 
 // Task 3: Write a JavaScript program to find the most frequent element in an array and return it.
 
@@ -49,6 +55,9 @@ function findMostFrequentElement(inputArray) {
 const inputArray = [3, 5, 7, 5, 3, 3, 8, 4, 5, 6, 6];
 const mostFrequent = findMostFrequentElement(inputArray);
 console.log(mostFrequent);
+
+
+
 
 // Task 4: Create a function that takes a sorted array of numbers and a target value as input. The function should find two numbers in the array that add up to the target value. Return an array containing the indices of the two numbers.
 
@@ -114,6 +123,29 @@ console.log(calculator(8, "/", 2)); // Output: 4
 console.log(calculator(5, "%", 3));
 
 
+
+
+// Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
+
+function generateRandomPassword(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*().,_-+=<>?';
+    let password = '';
+  
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      password += characters.charAt(randomIndex);
+    }
+  
+    return password;
+  }
+  
+  const passwordLength = 12; // You can adjust the length as needed
+  const randomPassword = generateRandomPassword(passwordLength);
+  console.log(randomPassword);
+  
+
+
+
 // Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
 
 const array = [32, 22, 53, 92, 20, 34, 23, 11, 17];
@@ -130,3 +162,6 @@ for (let i = 1; i < array.length; i++) {
 }
 // console.log(smallestNum);
 console.log(secondSmallestNum);
+
+
+
