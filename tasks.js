@@ -25,6 +25,34 @@ console.log(positiveNumberOfNumbers);
 
 
 
+// Task 3: Write a JavaScript program to find the most frequent element in an array and return it.
+
+function findMostFrequentElement(inputArray) {
+    if (inputArray.length === 0) {
+      return null; // Return null for an empty array
+    }
+  
+    const frequencyCount = {};
+    let mostFrequentElement;
+    let maxFrequency = 0;
+  
+    for (const num of inputArray) {
+      frequencyCount[num] = (frequencyCount[num] || 0) + 1;
+  
+      if (frequencyCount[num] > maxFrequency) {
+        maxFrequency = frequencyCount[num];
+        mostFrequentElement = num;
+      }
+    }
+  
+    return mostFrequentElement;
+  }
+  
+  // Test the program
+  const inputArray = [3, 5, 2, 5, 3, 3, 1, 4, 5];
+  const mostFrequent = findMostFrequentElement(inputArray);
+  console.log(mostFrequent);
+
 
 
 
